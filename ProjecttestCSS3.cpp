@@ -20,7 +20,8 @@ cout << "File open failed\n";
 exit(0);
 }
 
-string opcode;
+string opcode;//to hold value for opcode
+//the following emojis are the only possible opcode instructions
 string banana = "🍌"; //hardcode input-GOOD
 string coconut = "🥥"; //User-Input-GOOD
 string grape = "🍇"; //div-GOOD
