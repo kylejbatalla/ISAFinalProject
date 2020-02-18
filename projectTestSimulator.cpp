@@ -2,8 +2,8 @@
    Name: projectTestSimulator.cpp
    Authors: Kyle Batalla, Sergio Garcia, Jose Matamoros, Hector Lopez
    Class: CSS 3 Computer Architecture and Assembly Language Fall 2018
-   Purpose: To simulate an ISA using the assembled binary code in finalProject.cpp.
-   Description: This file reads the binary code that was assembled in finalProject.cpp and 
+   Purpose: To simulate an ISA using the assembled binary code in ProjecttestCSS3.cpp.
+   Description: This file reads the binary code that was assembled in ProjecttestCSS3.cpp and 
    outputted to projectTestOutput.txt, then runs and executes the users instructions and 
    displays the result.
 **************************************************************************************/
