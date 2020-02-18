@@ -1,3 +1,12 @@
+/************************************************************************************** 
+   Name: ProjecttestCSS3.cpp
+   Authors: Kyle Batalla, Sergio Garcia, Jose Matamoros, Hector Lopez
+   Class: CSS 3 Computer Architecture and Assembly Language Fall 2018
+   Purpose: To file serves as the assembler part of the project.
+   Description: This file reads the reads instructions and opcodes in projectTestIntput.txt
+   then converts them into binary instructions then is outputted to projectTestOutput.txt
+   so the simulator can read and execute the instructions and opcodes.
+**************************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -5,14 +14,14 @@
 #include <cmath>
 using namespace std;
 
-string dec_to_binary(int dec);
-string reg_to_bin(string reg);
+string dec_to_binary(int dec);//function to convert decimal to binary
+string reg_to_bin(string reg);//function to convert register declarations to binary
 
 
 int main()
 {
-ifstream fin("projectTestInput.txt");
-ofstream out("projectTestOutput.txt");
+ifstream fin("projectTestInput.txt");//opens .txt file with instructions and opcodes
+ofstream out("projectTestOutput.txt");//assembles instruction and opcodes into binary in this file
 
 if(fin.fail())
 {
@@ -21,12 +30,12 @@ exit(0);
 }
 
 string opcode;//to hold value for opcode
-//the following emojis are the only possible opcode instructions
+//the following emoji declarations are the only possible opcode instructions
 string banana = "🍌"; //Hardcode input
 string coconut = "🥥"; //User-Input
 string grape = "🍇"; //Division
 string strawberry = "🍓"; //Addition
-string eggplant = "🍆"; //Subtratction
+string eggplant = "🍆"; //Subtraction
 string pineapple = "🍍"; //Allocate array and input values
 string lemon = "🍋" ; //Output
 string apple = "🍎"; //Multiplication
@@ -36,14 +45,14 @@ string clear = "✖️"; //Clear registers
 string halt = "🚫"; //Halt
 string potato = "🥔"; // Array Num Search
 
-int num;
-string regis;
+int num;//to hold value of all decimal numbers
+string regis;//to hold all register allcations
 
-while(!fin.eof())
+while(!fin.eof())//reads projectTestInput.txt
 {
 fin >> opcode;
 
-if(opcode == banana)
+if(opcode == banana)//converts banana instruction and operands into binary
 {
 out << "0011";
 fin >> num;
@@ -52,105 +61,105 @@ fin >> regis;
 out << reg_to_bin(regis);
 out << endl;
 }
-else if(opcode == potato)
+else if(opcode == potato)//converts potato instruction into binary
 {
     out << "0100";
     fin >> regis;
-    out << reg_to_bin(regis);
+    out << reg_to_bin(regis);//assigns instruction to register
     out << "000000\n";
 }
-else if(opcode == coconut)
+else if(opcode == coconut)//converts coconut instruction into binary
 {
     out << "1000";
     fin >> regis;
-    out << reg_to_bin(regis);
+    out << reg_to_bin(regis);//assigns instruction to register
     out << "000000";
     out << endl;
 }
-else if(opcode == grape)
+else if(opcode == grape)//converts grape instruction and operands into binary 
 {
 out << "1100";
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 3; i++)//creates 3 registers
 {
 fin >> regis;
-out << reg_to_bin(regis);
+out << reg_to_bin(regis);//assigns operands and result to registers
 }
 out << endl;
 }
-else if(opcode == strawberry)
+else if(opcode == strawberry)//converts strawberry instruction and operands into binary
 {
 out << "0101";
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 3; i++)//creates 3 registers
 {
 fin >> regis;
-out << reg_to_bin(regis);
+out << reg_to_bin(regis);//assigns operands and result to registers
 }
 out << endl;
 }
-else if(opcode == eggplant)
+else if(opcode == eggplant)//converts eggplant instruction and operands into binary
 {
 out << "0111";
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 3; i++)//creates 3 registers
 {
 fin >> regis;
-out << reg_to_bin(regis);
+out << reg_to_bin(regis);//assisngs operands and result to registers
 }
 out << endl;
 }
-else if(opcode == repeat)
+else if(opcode == repeat)//converts repeat instruction into binary
 {
     out << "1011";
     fin >> regis;
-    out << reg_to_bin(regis);
+    out << reg_to_bin(regis);//assigns instruction to register
     out << "000000";
     out << endl;
 }
-else if(opcode == apple)
+else if(opcode == apple)//converts apple instruction and operands into binary
 {
 out << "1010";
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 3; i++)//creates 3 registers
 {
 fin >> regis;
-out << reg_to_bin(regis);
+out << reg_to_bin(regis);//assigns operands and result to registers
 }
 out << endl;
 }
-else if(opcode == kiwi)
+else if(opcode == kiwi)//converts kiwi instruction and operands into binary
 {
     out << "1101";
     fin >> regis;
-    out << reg_to_bin(regis);
+    out << reg_to_bin(regis);//assigns instruction to register
     out << "000000";
     out << endl;
 }
-else if(opcode == lemon)
+else if(opcode == lemon)//converts lemon instruction and operands into binary
 {
 out << "1111";
 fin >> regis;
-out << reg_to_bin(regis);
+out << reg_to_bin(regis);//assigns instruction to register
 out << "000000\n";
 }
-else if(opcode == halt)
+else if(opcode == halt)//converts halt instruction into binary
 {
 out << "0001";
 out << "000000000";
 out << endl;
 }
-else if(opcode == pineapple)
+else if(opcode == pineapple)//converts pineapple instruction into binary
 {
     out << "1001";
     fin >> regis;
-    out << reg_to_bin(regis);
+    out << reg_to_bin(regis);//assigns instruction to register
     out << "000000";
     out << endl;
 }
-else if(opcode == clear)
+else if(opcode == clear)//converts clear instruction into binary
 {
 out << "0000";
 out << "000000000";
 out << endl;
 }
-else
+else//outputs error if instruction is not recognized
 {
 cout << "ERROR: INSTRUCTION DOESN'T EXIST\n";
 exit(0);
@@ -164,7 +173,7 @@ out.close();
 return 0;
 }
 
-string dec_to_binary(int dec)
+string dec_to_binary(int dec)//function to convert decimal to binary
 {
 string bin = "";
 
@@ -185,7 +194,7 @@ bin = "0" + bin;
 return bin;
 }
 
-string reg_to_bin(string reg)
+string reg_to_bin(string reg)//converts register allocations into binary
 {
 if(reg == "R1")
 return "000";
