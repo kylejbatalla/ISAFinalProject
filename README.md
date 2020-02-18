@@ -3,16 +3,29 @@ This program was made for the final CSS3 Computer Architecture and Assembly Lang
 
 The following opcode declarations are the possible opcode instructions as defined in ProjecttestCSS3.cpp
 Any unknown opcode entered will result in an error.
-string banana = "🍌"; //hardcode input-GOOD
-string coconut = "🥥"; //User-Input-GOOD
-string grape = "🍇"; //div-GOOD
-string strawberry = "🍓"; //sum-GOOD
-string eggplant = "🍆"; //sub-GOOD
+
+string banana = "🍌"; //hardcode input
+
+string coconut = "🥥"; //User-Input
+
+string grape = "🍇"; //div
+
+string strawberry = "🍓"; //sum
+
+string eggplant = "🍆"; //sub
+
 string pineapple = "🍍"; //ARRAY
-string lemon = "🍋" ; // out-GOOD
-string apple = "🍎"; // mult-GOOD
-string kiwi = "🥝"; // INPUT-GOOD
-string repeat = "🔁"; // Make array and display sum-GOOD
-string clear = "✖️"; // Clear-good
-string halt = "🚫"; // Halt-GOOD
-string potato = "🥔"; // Array Num Search - GOOD
+
+string lemon = "🍋" ; // out
+
+string apple = "🍎"; // mult
+
+string kiwi = "🥝"; // INPUT
+
+string repeat = "🔁"; // Make array and display sum
+
+string clear = "✖️"; // Clear
+
+string halt = "🚫"; // Halt
+
+string potato = "🥔"; // Array Num Search 
