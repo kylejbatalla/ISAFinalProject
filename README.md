@@ -12,7 +12,7 @@ string grape = "🍇"; //Division
 
 string strawberry = "🍓"; //Addition
 
-string eggplant = "🍆"; //Subtratction
+string eggplant = "🍆"; //Subtraction
 
 string pineapple = "🍍"; //Allocate array and input values
 
