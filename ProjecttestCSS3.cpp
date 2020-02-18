@@ -22,19 +22,19 @@ exit(0);
 
 string opcode;//to hold value for opcode
 //the following emojis are the only possible opcode instructions
-string banana = "🍌"; //hardcode input-GOOD
-string coconut = "🥥"; //User-Input-GOOD
-string grape = "🍇"; //div-GOOD
-string strawberry = "🍓"; //sum-GOOD
-string eggplant = "🍆"; //sub-GOOD
-string pineapple = "🍍"; //ARRAY
-string lemon = "🍋" ; // out-GOOD
-string apple = "🍎"; // mult-GOOD
-string kiwi = "🥝"; // INPUT-GOOD
-string repeat = "🔁"; // Make array and display sum-GOOD
-string clear = "✖️"; // Clear-good
-string halt = "🚫"; // Halt-GOOD
-string potato = "🥔"; // Array Num Search - GOOD
+string banana = "🍌"; //Hardcode input
+string coconut = "🥥"; //User-Input
+string grape = "🍇"; //Division
+string strawberry = "🍓"; //Addition
+string eggplant = "🍆"; //Subtratction
+string pineapple = "🍍"; //Allocate array and input values
+string lemon = "🍋" ; //Output
+string apple = "🍎"; //Multiplication
+string kiwi = "🥝"; //User Input
+string repeat = "🔁"; //Allocate array and display sum
+string clear = "✖️"; //Clear registers
+string halt = "🚫"; //Halt
+string potato = "🥔"; // Array Num Search
 
 int num;
 string regis;
